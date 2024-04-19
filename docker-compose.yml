@@ -1,0 +1,19 @@
+# version: '3'
+
+# services:
+#   image:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - "8000:8000"
+#     volumes:
+#       - .:/app:nocopy
+
+# volumes:
+#   django-volume:
+#     driver: local
+#     driver_opts:
+#       type: 'none'
+#       o: 'bind'
+#       device: "/Users/${USER}/Desktop/WebDevelopement/Django"
