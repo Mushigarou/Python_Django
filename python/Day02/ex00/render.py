@@ -14,7 +14,7 @@ def readTemplate(filename: str) -> str:
         print(f"Code Error: {e}")
         exit(1)
 
-def renderTemplate(cv: str, **kw) -> str:
+def renderHTML(cv: str, **kw) -> str:
     for elem in kw:
         cv = cv.replace("{" + elem + "}", kw[elem])
     return cv
@@ -35,7 +35,7 @@ def main():
     filename = parseFilename()
     cv = readTemplate(filename)
     obj = Template()
-    render = renderTemplate(cv, **obj.__dict__)
+    render = renderHTML(cv, **obj.__dict__)
     try:
         s = filename[:filename.find(".template")]
         with open(f"{s}.html", 'w+') as output:
