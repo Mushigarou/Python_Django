@@ -8,5 +8,9 @@ RUN sh -c "$(wget -O- https://github.com/deluan/zsh-in-docker/releases/download/
 
 COPY . .
 
+EXPOSE 8000
+
 ENTRYPOINT [ "bash" ]
+
+# ENTRYPOINT ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
 

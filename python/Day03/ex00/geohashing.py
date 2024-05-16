@@ -6,4 +6,5 @@ def hashLocation():
     print(s)
 
 if __name__ == "__main__":
+    """ TODO: Ask User for input """
     hashLocation()
